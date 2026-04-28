@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة التقديم - مؤسسة الوليد للأعمال الخيرية</title>
+    <link rel="stylesheet" href="styles/portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>مؤسسة الوليد</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">عن المؤسسة</a></li>
+                <li class="nav-item"><a href="index.html#services" class="nav-link">المشاريع والخدمات</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portal Header -->
+    <div class="portal-header">
+        <div class="container">
+            <h1>بوابة تقديم طلب الدعم</h1>
+            <p>نموذج متقدم وآمن لتقديم طلبك للحصول على الدعم والمساعدة</p>
+        </div>
+    </div>
+
+    <!-- Main Portal Container -->
+    <div class="container portal-container">
+        <!-- Progress Indicator -->
+        <div class="progress-indicator">
+            <div class="progress-step active" data-step="1">
+                <div class="step-number">1</div>
+                <span>البيانات الشخصية</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="2">
+                <div class="step-number">2</div>
+                <span>جهات الاتصال</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="3">
+                <div class="step-number">3</div>
+                <span>تفاصيل الطلب</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="4">
+                <div class="step-number">4</div>
+                <span>البيانات البنكية</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="5">
+                <div class="step-number">5</div>
+                <span>المرفقات</span>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form id="applicationForm" class="application-form">
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active" id="step1">
+                <h2 class="step-title"><i class="fas fa-user-circle"></i> البيانات الشخصية</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="أدخل اسمك الكامل">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">دولة الإقامة *</label>
+                        <select id="country" name="country" required>
+                            <option value="">اختر دولة</option>
+                            <option value="Saudi Arabia">المملكة العربية السعودية</option>
+                            <option value="UAE">الإمارات العربية المتحدة</option>
+                            <option value="Egypt">مصر</option>
+                            <option value="Jordan">الأردن</option>
+                            <option value="Lebanon">لبنان</option>
+                            <option value="Kuwait">الكويت</option>
+                            <option value="Qatar">قطر</option>
+                            <option value="Bahrain">البحرين</option>
+                            <option value="Oman">عمان</option>
+                            <option value="Yemen">اليمن</option>
+                            <option value="Palestine">فلسطين</option>
+                            <option value="Syria">سوريا</option>
+                            <option value="Iraq">العراق</option>
+                            <option value="Tunisia">تونس</option>
+                            <option value="Morocco">المغرب</option>
+                            <option value="Algeria">الجزائر</option>
+                            <option value="Libya">ليبيا</option>
+                            <option value="Sudan">السودان</option>
+                            <option value="Somalia">الصومال</option>
+                            <option value="Other">أخرى</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="maritalStatus">الحالة الاجتماعية *</label>
+                        <select id="maritalStatus" name="maritalStatus" required>
+                            <option value="">اختر الحالة</option>
+                            <option value="single">أعزب/عزباء</option>
+                            <option value="married">متزوج/متزوجة</option>
+                            <option value="divorced">مطلق/مطلقة</option>
+                            <option value="widowed">أرمل/أرملة</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="children">عدد الأطفال *</label>
+                        <input type="number" id="children" name="children" min="0" max="20" required placeholder="0">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="step-buttons">
+                    <button type="button" class="btn-next" onclick="nextStep(1)">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 2: Contact & Career -->
+            <div class="form-step" id="step2">
+                <h2 class="step-title"><i class="fas fa-phone"></i> جهات الاتصال والمهنة</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+966 5X XXX XXXX">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="profession">المهنة/الوظيفة *</label>
+                        <input type="text" id="profession" name="profession" required placeholder="مثال: مهندس، طبيب، معلم">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyIncome">الدخل الشهري (بالريال السعودي) *</label>
+                        <input type="number" id="monthlyIncome" name="monthlyIncome" min="0" required placeholder="0">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="step-buttons">
+                    <button type="button" class="btn-prev" onclick="prevStep(2)"><i class="fas fa-arrow-right"></i> السابق</button>
+                    <button type="button" class="btn-next" onclick="nextStep(2)">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 3: Grant Details -->
+            <div class="form-step" id="step3">
+                <h2 class="step-title"><i class="fas fa-file-invoice"></i> تفاصيل الطلب</h2>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="grantType">نوع الدعم المطلوب *</label>
+                        <select id="grantType" name="grantType" required>
+                            <option value="">اختر نوع الدعم</option>
+                            <option value="housing">إسكان</option>
+                            <option value="investment">استثمار وتطوير أعمال</option>
+                            <option value="projects">مشاريع صغيرة</option>
+                            <option value="debts">سداد الديون</option>
+                            <option value="marriage">تكاليف الزواج</option>
+                            <option value="education">التعليم والتدريب</option>
+                            <option value="car">شراء سيارة</option>
+                            <option value="needy">مساعدة المحتاجين</option>
+                            <option value="sickness">علاج الأمراض</option>
+                            <option value="donation">تبرع عام</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="requestAmount">المبلغ المطلوب (بالريال السعودي) *</label>
+                        <input type="number" id="requestAmount" name="requestAmount" min="1000" required placeholder="0">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="requestDescription">شرح مفصل للطلب *</label>
+                        <textarea id="requestDescription" name="requestDescription" required placeholder="اشرح بالتفصيل حالتك واحتياجاتك" rows="6"></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="step-buttons">
+                    <button type="button" class="btn-prev" onclick="prevStep(3)"><i class="fas fa-arrow-right"></i> السابق</button>
+                    <button type="button" class="btn-next" onclick="nextStep(3)">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 4: Banking Information -->
+            <div class="form-step" id="step4">
+                <h2 class="step-title"><i class="fas fa-university"></i> البيانات البنكية</h2>
+                <div class="info-box">
+                    <i class="fas fa-info-circle"></i>
+                    <p>هذه البيانات سيتم استخدامها فقط لتحويل المبلغ المقرر لك عند الموافقة على طلبك</p>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="bankName">اسم البنك *</label>
+                        <select id="bankName" name="bankName" required>
+                            <option value="">اختر البنك</option>
+                            <option value="sab">البنك الأهلي السعودي</option>
+                            <option value="riyad">بنك الرياض</option>
+                            <option value="samba">بنك سامبا</option>
+                            <option value="arab">البنك العربي الوطني</option>
+                            <option value="ncb">البنك الوطني</option>
+                            <option value="rajhi">بنك الراجحي</option>
+                            <option value="alb">البنك الأول</option>
+                            <option value="imb">البنك الدولي الإسلامي</option>
+                            <option value="aib">بنك الاستثمار العربي</option>
+                            <option value="bmo">بنك الاستثمار المتحد</option>
+                            <option value="cib">البنك التجاري الدولي</option>
+                            <option value="gulf">بنك الخليج</option>
+                            <option value="other">بنك آخر</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="accountHolder">صاحب الحساب *</label>
+                        <input type="text" id="accountHolder" name="accountHolder" required placeholder="اسم صاحب الحساب">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="iban">رقم الآيبان (IBAN) *</label>
+                        <input type="text" id="iban" name="iban" required placeholder="SA00 0000 0000 0000 0000 0000" maxlength="24">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="step-buttons">
+                    <button type="button" class="btn-prev" onclick="prevStep(4)"><i class="fas fa-arrow-right"></i> السابق</button>
+                    <button type="button" class="btn-next" onclick="nextStep(4)">التالي <i class="fas fa-arrow-left"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 5: Attachments -->
+            <div class="form-step" id="step5">
+                <h2 class="step-title"><i class="fas fa-paperclip"></i> المرفقات المطلوبة</h2>
+                <div class="info-box warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>يجب تحميل صورة واضحة من جانبي بطاقة الهوية. الحد الأقصى لحجم كل ملف: 5 MB</p>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="idFront">صورة بطاقة الهوية - الوجه الأمامي *</label>
+                        <div class="file-upload-area" id="idFrontArea">
+                            <input type="file" id="idFront" name="idFront" accept="image/*" required>
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>اسحب الملف هنا أو انقر للتحميل</p>
+                            <span class="file-type">صيغ مدعومة: JPG, PNG, PDF (الحد الأقصى 5 MB)</span>
+                        </div>
+                        <div class="file-preview" id="idFrontPreview"></div>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="idBack">صورة بطاقة الهوية - الوجه الخلفي *</label>
+                        <div class="file-upload-area" id="idBackArea">
+                            <input type="file" id="idBack" name="idBack" accept="image/*" required>
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>اسحب الملف هنا أو انقر للتحميل</p>
+                            <span class="file-type">صيغ مدعومة: JPG, PNG, PDF (الحد الأقصى 5 MB)</span>
+                        </div>
+                        <div class="file-preview" id="idBackPreview"></div>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">أوافق على شروط الاستخدام وسياسة الخصوصية *</label>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="step-buttons">
+                    <button type="button" class="btn-prev" onclick="prevStep(5)"><i class="fas fa-arrow-right"></i> السابق</button>
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fas fa-check-circle"></i> تقديم الطلب
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Success Modal -->
+        <div class="modal" id="successModal">
+            <div class="modal-content success">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>تم تقديم طلبك بنجاح!</h2>
+                <div class="transaction-box">
+                    <p>رقم المعاملة:</p>
+                    <h3 id="transactionNumber">WA-2026-0000</h3>
+                </div>
+                <p class="modal-message">سيتم التواصل معك قريباً عبر الرقم المسجل لديك</p>
+                <p class="modal-message small">جاري تحويلك إلى واتساب للتأكيد من الطلب...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/portal.js"></script>
+</body>
+  </html>
