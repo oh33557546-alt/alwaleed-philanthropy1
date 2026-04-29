@@ -3,45 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة الوليد للإنسانية</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>مؤسسة الوليد للأعمال الخيرية - Waleed Philanthropies</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="navbar" id="mainNav">
-        <div class="navbar-logo">
-            <img src="https://alwaleedphilanthropies.org/themes/custom/alwaleed/logo.svg" alt="Logo" style="height: 50px;">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>مؤسسة الوليد</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">عن المؤسسة</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">المشاريع والخدمات</a></li>
+                <li class="nav-item"><a href="#blog" class="nav-link">أخبار وحملات</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">آراء وشهادات</a></li>
+                <li class="nav-item"><a href="portal.html" class="nav-link portal-btn">بوابة التقديم</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">من نحن</a></li>
-            <li><a href="#">مجالات التركيز</a></li>
-            <li><a href="#">مركز الأخبار</a></li>
-            <li><a href="portal.html" class="portal-btn">بوابة التقديم</a></li>
-        </ul>
     </nav>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://alwaleedphilanthropies.org/themes/custom/alwaleed/video/home-video.mp4" type="video/mp4">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop>
+            <source src="https://videos.pexels.com/video-files/4325906/4325906-hd_1920_1080_25fps.mp4" type="video/mp4">
         </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">التزامنا بالإنسانية لا يعرف حدوداً</h1>
-            <p>نعمل من أجل عالم أكثر تسامحاً وقبولاً ومساواة</p>
-            <button class="cta-main" onclick="location.href='portal.html'">اكتشف مبادراتنا</button>
+            <h1 class="hero-title">تغيير الحياة من خلال العطاء والإحسان</h1>
+            <p class="hero-subtitle">نحن ملتزمون بدعم المشاريع الإنسانية والتنموية حول العالم</p>
+            <a href="portal.html" class="cta-button">ابدأ طلبك الآن</a>
         </div>
-    </header>
+    </section>
 
-    <script>
-        window.onscroll = function() {
-            var nav = document.getElementById('mainNav');
-            if (window.pageYOffset > 100) {
-                nav.classList.add("scrolled");
-            } else {
-                nav.classList.remove("scrolled");
-            }
-        };
-    </script>
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3 class="stat-number" data-count="50000">0</h3>
+                <p class="stat-label">مستفيد مباشر</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" data-count="250">0</h3>
+                <p class="stat-label">مشروع إنساني</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" data-count="150">0</h3>
+                <p class="stat-label">دولة مستقيدة</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" data-count="5000">0</h3>
+                <p class="stat-label">مليون ريال موزع</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">أحدث الأخبار والمشاريع</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="https://images.unsplash.com/photo-1488521787991-3873fed32fc4?w=500&h=300&fit=crop" alt="مشروع تعليمي">
+                    <div class="news-content">
+                        <h3>برنامج الدعم التعليمي للطلاب المتفوقين</h3>
+                        <p>إطلاق برنامج شامل لدعم الطلاب المتفوقين من الأسر محدودة الدخل</p>
+                        <span class="news-date">28 أبريل 2026</span>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=500&h=300&fit=crop" alt="مشروع صحي">
+                    <div class="news-content">
+                        <h3>حملة طبية مجانية لفحص الأمراض المزمنة</h3>
+                        <p>توفير فحوصات طبية شاملة ومجانية للمناطق النائية</p>
+                        <span class="news-date">25 أبريل 2026</span>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://images.unsplash.com/photo-1559329007-40ec44d1641a?w=500&h=300&fit=crop" alt="مشروع إسكاني">
+                    <div class="news-content">
+                        <h3>مشروع الإسكان الكريم للعائلات المتعففة</h3>
+                        <p>بناء 100 منزل بمواصفات حديثة في المناطق المحتاجة</p>
+                        <span class="news-date">20 أبريل 2026</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>عن المؤسسة</h4>
+                <p>مؤسسة الوليد للأعمال الخيرية المتخصصة في الدعم الإنساني والتنموي</p>
+            </div>
+            <div class="footer-section">
+                <h4>تواصل معنا</h4>
+                <p>الهاتف:+966545239928 </p>
+                <p>البريد: info@waleedphilanthropies.org</p>
+            </div>
+            <div class="footer-section">
+                <h4>تابعنا</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 مؤسسة الوليد للأعمال الخيرية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
